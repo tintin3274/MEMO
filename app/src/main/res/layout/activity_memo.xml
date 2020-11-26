@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:layout_gravity="center">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/constraintLayoutButtonTop"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayoutBackground"
+            android:background="#DCDCDC">
+
+        <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp" app:srcCompat="@drawable/check_circle_outline_24px"
+                android:id="@+id/imageButtonComplete"
+                android:background="@null" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                android:scaleType="fitCenter" android:onClick="clickImageButtonComplete"
+                android:layout_marginTop="8dp" android:layout_marginEnd="8dp"/>
+        <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp" app:srcCompat="@drawable/highlight_off_24px"
+                android:id="@+id/imageButtonCancel" android:background="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                android:scaleType="fitCenter" android:onClick="clickImageButtonCancel" android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/constraintLayoutButtonBottom"
+    >
+
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/bucket"
+                android:id="@+id/imageButtonBackgroundColor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@null"
+                android:contentDescription="Background Color" android:onClick="clickImageButtonBackgroundColor"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_marginStart="8dp"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/format_size_24px"
+                android:id="@+id/imageButtonTextSize"
+                app:layout_constraintTop_toTopOf="@+id/imageButtonBackgroundColor"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonBackgroundColor"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonBackgroundColor" android:background="@null"
+                android:layout_marginStart="16dp" android:contentDescription="Text Size"
+                android:onClick="clickImageButtonTextSize"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/format_align_left_24px"
+                android:id="@+id/imageButtonTextAlignment"
+                app:layout_constraintTop_toTopOf="@+id/imageButtonTextSize"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonTextSize"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonTextSize" android:background="@null"
+                android:layout_marginStart="16dp" android:contentDescription="TextAlignment"
+                android:onClick="clickImageButtonTextAlignment"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/palette_24px"
+                android:id="@+id/imageButtonTextColor"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonTextAlignment"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonTextAlignment"
+                app:layout_constraintTop_toTopOf="@+id/imageButtonTextAlignment" android:background="@null"
+                android:layout_marginStart="16dp" android:contentDescription="Text Color"
+                android:onClick="clickImageButtonTextColor"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/delete_24px"
+                android:id="@+id/imageButtonDelete"
+                app:layout_constraintEnd_toStartOf="@+id/imageButtonInformation"
+                app:layout_constraintTop_toTopOf="@+id/imageButtonInformation"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonInformation" android:background="@null"
+                android:layout_marginEnd="16dp" android:contentDescription="TODO"
+                android:onClick="clickImageButtonDelete"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/info_24px"
+                android:id="@+id/imageButtonInformation"
+                app:layout_constraintEnd_toStartOf="@+id/imageButtonNotification"
+                app:layout_constraintTop_toTopOf="@+id/imageButtonNotification"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonNotification" android:background="@null"
+                android:layout_marginEnd="16dp" android:contentDescription="Information"
+                android:onClick="clickImageButtonInformation"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/notification_important_24px"
+                android:id="@+id/imageButtonNotification"
+                app:layout_constraintEnd_toStartOf="@+id/imageButtonShare"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonShare"
+                app:layout_constraintTop_toTopOf="@+id/imageButtonShare" android:background="@null"
+                android:layout_marginEnd="16dp" android:contentDescription="Notification"
+                android:onClick="clickImageButtonNotification"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/share_24px"
+                android:id="@+id/imageButtonShare"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" android:background="@null"
+                android:contentDescription="Share"
+                android:onClick="clickImageButtonShare" android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" android:layout_marginEnd="8dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#9AEDE6" android:id="@+id/constraintLayoutBackground"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayoutButtonBottom"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutButtonTop" android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editTextTextMultiLine"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="16dp" android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp" android:background="@null"
+                android:textSize="18sp"
+                android:textAlignment="inherit" android:gravity="center"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MEMO</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <string name="title_memo">MEMO</string>
+    <string name="title_todo">TO-DO</string>
+    <string name="title_day">D-DAY</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>

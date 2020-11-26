@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Sort" android:icon="@drawable/descendant" app:showAsAction="ifRoom"
+          app:iconTint="@color/materialcolorpicker__white"
+
+          android:id="@+id/menuButtonSort"/>
+
+    <item android:title="Layout" android:icon="@drawable/blocks" app:showAsAction="ifRoom"
+          app:iconTint="@color/materialcolorpicker__white"
+
+          android:id="@+id/menuButtonLayout"/>
+</menu>
